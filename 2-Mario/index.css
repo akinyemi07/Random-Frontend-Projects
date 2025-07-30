@@ -1,12 +1,207 @@
-/* rest and rebase */
-.box{
-    height: 500px;
-    width: 100%;
+/*********************************************************************************************
+*   Name: Akinyemi Sodiq Adeyink(code enigma)
+*   Tite: Mario Club
+*   Scope: Learning Frontend Basics
+*   Date : 4th of july 2025
+*
+********************************************************************************************/
+
+/* Reset and Rebase */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-  
-.black{
-        height: 150px;
-        width: 150px;
-        margin: 0 30px 0 0;
-        background-color: black;
-    }
+/* Styling the header */
+header{
+    background-color: #f63232;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+header h1{
+    color: white;
+    border: 8px solid white;
+    padding:6px 12px ;
+    display: inline-block;
+    border-radius: 36px;
+}
+/* 
+i am giving this banner a relative position so that i can give 
+the welcome text absolute so that we can position it on the image  */
+.banner{
+    position: relative;
+}
+/*so initially i gave the banner class a 100% width but it didnt work
+so i have to do overflow for x and y and set it as hidden but it still
+didnt work, the image was cut but with focusing on the image, it can be 
+set to 100%*/
+.banner img{
+    max-width: 100%;
+}
+/* now i will give the welcome text the value of position absolute and move it 
+in beween the image */
+.welcome{
+    position: absolute;
+    left: 0;
+    top: 30%;
+    background-color: #feb614;
+    padding: 30px;
+    
+
+}
+.banner h2{
+    color: white;
+    font-size: 74px;
+}
+.banner h2 span{
+    font-size: 1.3em;
+}
+/* lets move on the navbar */
+nav{
+    position:sticky;
+    background-color: #bebaba ;
+    padding: 20px;
+    top: 100px;
+    margin-top:0;
+}
+nav ul{
+
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+nav ul li{
+width: 25%;
+display: inline-block;
+font-size: 24px;
+transition: all 0.3s ease;
+}
+nav ul li a{
+    text-decoration: none;
+    columns: #4b4b4b;
+}
+nav ul li a.join{
+    color: red;
+}
+nav ul li a:hover{
+    color:rgb(233, 71, 7);
+    background-color: burlywood;
+    border: 2px dashed yellow;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: underline;
+
+}
+.content{
+    max-width: 100%;
+    width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+    box-sizing:border-box;
+    /* background-color: limegreen; */
+}
+.red{
+    font-size: 50px;
+    color: brown;
+    margin-top: 0;
+    margin-bottom:20px;
+    text-align: center;
+}
+article h2{
+    font-size: 48px;
+    color: red;
+
+}
+article h3{
+    font-size: 32px;
+    color: rgb(2, 221, 75);
+}
+article p{
+    line-height: 2em;
+    color: rgb(4, 18, 212);
+
+}
+.images{
+    text-align: center;
+    margin: 20px 0;
+    /* margin: 80px 0; */
+    display: flex;
+    justify-content: center;
+}
+.images li{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 40%;
+    /* white-space: nowrap; */
+    gap:10px;
+    transition: top 0.3s ease;
+
+}
+.images li img{
+    max-width: 100%;
+    margin: 0 5%;
+    /* margin: 20px 5%; */
+}
+section.join{
+    background:#f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+    color: blue;
+
+}
+section.join h2{
+    color: indianred;
+    font-size: 36px;
+}
+form input{
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 24px;
+    border-radius: 28px;
+    border: 4px solid #f63232;
+}
+footer{
+    background-color: #f63232;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+ /* pseudoclasses */
+ .images li:hover{
+    position: relative;
+    top:-20px;
+ }
+ form input:focus{
+    border: 1px dashed magenta;
+    outline: none;
+ }
+ form input:valid{
+    border: 2px dashed green;
+    outline: none;
+ }
+ h1, h2, h3, h4::first-letter{
+    color: blueviolet;
+
+ }
+ article p::first-letter{
+    color: #f63232;
+    font-weight: bold;
+ }
+
+
+
+
+
+
+@media screen and (max-width:963px){
+
+}
+    
